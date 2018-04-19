@@ -13,10 +13,17 @@ var roomSchema = new Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    required: true
+  
+ // date range (start-> end) of occupancy for this booking / room / house / user
+ startDate: {
+  type: Date,
+  required: true
   },
+endDate: {
+      type: Date,
+      required: true
+  },
+
   // room address - number & 'street' e.g.  "385 Ocean Walk"
   house: {
     type: String,
