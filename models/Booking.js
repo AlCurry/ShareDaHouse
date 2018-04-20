@@ -7,28 +7,34 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 // Create the headlineSchema with our schema class
-var roomSchema = new Schema({
+var bookingSchema = new Schema({
 
-  user: {
-    type: String,
-    required: true
+  // user id - line to User Schema
+  _userId: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
   },
   
- // date range (start-> end) of occupancy for this booking / room / house / user
- startDate: {
-  type: Date,
-  required: true
+  // date range (start-> end) of occupancy for this booking / room / house / user
+  startDate: {
+    type: Date,
+    required: true
   },
-endDate: {
-      type: Date,
-      required: true
+  endDate: {
+    type: Date,
+    required: true
   },
 
-  // room address - number & 'street' e.g.  "385 Ocean Walk"
-  house: {
-    type: String,
-    required: true
-    // unique: { index: { unique: true } }
+  // house id - line to House Schema
+  _houseId: {
+    type: Schema.Types.ObjectId,
+    ref: "House"
+  },
+
+  // room id - line to Room Schema
+  _roomId: {
+    type: Schema.Types.ObjectId,
+    ref: "Room"
   },
   room: {
     type: String

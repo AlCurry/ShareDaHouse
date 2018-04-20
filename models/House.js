@@ -30,17 +30,21 @@ var houseSchema = new Schema({
   },
   bedrooms: {
     type: Number
-  //  required: true
+    //  required: true
   },
-bathrooms: {
+  bathrooms: {
     type: Number
-  //  required: true
+    //  required: true
   },
   // Homeowner, or lessor, or "house coordinator"
-  owner: {
-    type: String,
-    required: true
-  },
+  //owner: {
+   // type: String,
+   // required: true
+  //},
+   _ownerId: {
+      type: Schema.Types.ObjectId,
+      ref: "User"
+   },
   // privacy flag, defaults to true, for now each schema has this flag, it may not be needed in each
   private: {
     type: Boolean,
