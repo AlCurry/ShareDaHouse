@@ -9,16 +9,21 @@ var Schema = mongoose.Schema;
 
 // Create the headlineSchema with our schema class
 var roomSchema = new Schema({
-  // house address - number & 'street' e.g.  "385 Ocean Walk"
-  house: {
-    type: String
-    // unique: { index: { unique: true } }
+  // house id - line to House Schema
+  _houseId: {
+    type: Schema.Types.ObjectId,
+    ref: "House"
   },
   // Homeowner, or lessor, or "house coordinator"
-  owner: {
-    type: String,
-    required: true
+  //owner: {
+  //  type: String,
+  //  required: true
+  //},
+  _ownerId: {
+    type: Schema.Types.ObjectId,
+    ref: "User"
   },
+  
   // "queen", "king", "two twins" would be typical values
   bed: {
     type: String,
