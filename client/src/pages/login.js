@@ -3,6 +3,7 @@ import TextDisplay from "../components/TextDisplay";
 import Input from "../components/Input/Input";
 import FileInput from "../components/Input/FileInput";
 
+
 class LoginPage extends React.Component {
   constructor() {
     super();
@@ -28,6 +29,7 @@ class LoginPage extends React.Component {
             name="password"
             placeholder="Password"
             type="password"
+          
           />
         </div>
         <button onClick={() => alert("User:  " + this.state.username)}>

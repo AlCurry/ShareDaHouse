@@ -4,6 +4,7 @@
   "description": "Share House Project 4",
   "main": "server.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-preset-es2015-node6": "^0.4.0",
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.2",
@@ -31,5 +32,6 @@
   "bugs": {
     "url": "https://github.com/AlCurry/ShareDaHouse/issues"
   },
-  "homepage": "https://github.com/AlCurry/ShareDaHouse#readme"
+  "homepage": "https://github.com/AlCurry/ShareDaHouse#readme",
+  "keywords": []
 }

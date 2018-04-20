@@ -4,7 +4,7 @@ import TextDisplay from "../components/TextDisplay";
 const DashboardPage = () => {
   return (
     <div className="page">
-      <TextDisplay title="Dashboard" subtitle="project finished">
+      <TextDisplay tinyTitle="Dashboard" subtitle="project finished">
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ab
         magnam nesciunt dolore unde eaque minima consequuntur dolores, inventore
         voluptatum exercitationem sed doloremque numquam expedita! Reiciendis

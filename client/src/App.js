@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <Nav />
+          <Nav Sharehouse="hi"> jhbhbjhbhj </Nav>
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/dashboard" component={DashboardPage} />
