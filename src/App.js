@@ -1,19 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Nav from "./components/Nav";
+import LandingPage from "./pages/landing";
+import HomePage from "./pages/home";
+import DashboardPage from "./pages/dashboard";
+import Footer from "./components/Footer";
+import "./master.css";
 
-class App extends Component {
+class App extends React.Component {
+  state = {};
+  // Handles updating component state when the user types into the input field
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <div>
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={LandingPage} />
+            <Route exact path="/dashboard" component={DashboardPage} />
+            <Route exact path="/add/home" component={HomePage} />
+          </Switch>
+          <Footer>officiis fugit.</Footer>
+        </div>
+      </Router>
     );
   }
 }
