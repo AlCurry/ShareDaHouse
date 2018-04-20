@@ -2,6 +2,7 @@ import React from "react";
 import TextDisplay from "../components/TextDisplay";
 import Input from "../components/Input/Input";
 import FileInput from "../components/Input/FileInput";
+import axios from "axios";
 
 class HomePage extends React.Component {
   constructor() {
@@ -14,6 +15,15 @@ class HomePage extends React.Component {
       [name]: value
     });
   };
+  handleHousePost = () => {
+    alert(this.state.address + "  " + this.state.address2);
+    axios
+      .post("/save", { firstName: "Marlon", lastName: "Bernardes" })
+      .then(function(response) {
+        console.log("saved successfully");
+      });
+  };
+
   render() {
     return (
       <div className="page">
@@ -39,10 +49,7 @@ class HomePage extends React.Component {
             <FileInput>Photograph: </FileInput>
           </TextDisplay>
         </div>
-        <button
-          onClick={() => alert("Description:  " + this.state.description)}>
-          Alert the Description
-        </button>
+        <button onClick={() => this.handleHousePost()}>Post</button>
       </div>
     );
   }

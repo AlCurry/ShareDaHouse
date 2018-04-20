@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import LandingPage from "./pages/landing";
 import HomePage from "./pages/home";
 import DashboardPage from "./pages/dashboard";
+import LoginPage from "./pages/login";
 import Footer from "./components/Footer";
 import "./master.css";
 
@@ -19,6 +20,7 @@ class App extends React.Component {
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/dashboard" component={DashboardPage} />
             <Route exact path="/add/home" component={HomePage} />
+            <Route exact path="/login" component={LoginPage} />
           </Switch>
           <Footer>officiis fugit.</Footer>
         </div>

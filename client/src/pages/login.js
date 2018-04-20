@@ -20,8 +20,8 @@ class LoginPage extends React.Component {
         <div className="signin">
           <Input
             onChange={e => this.handleInputChange(e)}
-            name="address"
-            placeholder="Address 1 (required)"
+            name="username"
+            placeholder="Username"
           />
           <Input
             onChange={e => this.handleInputChange(e)}
@@ -30,13 +30,12 @@ class LoginPage extends React.Component {
             type="password"
           />
         </div>
-        <button
-          onClick={() => alert("Description:  " + this.state.description)}>
-          Alert the Description
+        <button onClick={() => alert("User:  " + this.state.username)}>
+          Alert the User
         </button>
       </div>
     );
   }
 }
 
-export default HomePage;
+export default LoginPage;
