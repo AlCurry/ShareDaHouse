@@ -19,7 +19,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route exact path="/dashboard" component={DashboardPage} />
-            <Route exact path="/add/home" component={HomePage} />
+            <Route exact path="/home" component={HomePage} />
             <Route exact path="/login" component={LoginPage} />
           </Switch>
           <Footer>officiis fugit.</Footer>

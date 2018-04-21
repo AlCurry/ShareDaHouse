@@ -1,9 +1,11 @@
 import React from "react";
 import TextDisplay from "../components/TextDisplay";
+import AddBox from "./components/addbox";
 
 const DashboardPage = () => {
   return (
     <div className="page">
+      <AddBox/>
       <TextDisplay title="Dashboard" subtitle="project finished">
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus ab
         magnam nesciunt dolore unde eaque minima consequuntur dolores, inventore

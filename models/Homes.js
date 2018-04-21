@@ -1,4 +1,4 @@
-// House model
+// Houses model
 // ==============
 
 // Require mongoose
@@ -8,16 +8,16 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 // Create the houseSchema with our schema class
-var houseSchema = new Schema({
+var HomesSchema = new Schema({
   // house address - number & 'street' e.g.  "385 Ocean Walk"
+  name: {
+    type: String,
+    required: true
+  },
   address: {
     type: String,
     required: true,
     unique: { index: { unique: true } }
-  },
-  // house name, optional
-  name: {
-    type: String
   },
   // house picture, optional, "Buffer" is the mongoose data type for images
   pic: {
@@ -29,12 +29,12 @@ var houseSchema = new Schema({
     required: true
   },
   bedrooms: {
-    type: Number
-    //  required: true
+    type: Number,
+    required: true
   },
   bathrooms: {
-    type: Number
-    //  required: true
+    type: Number,
+    required: true
   },
   // Homeowner, or lessor, or "house coordinator"
   //owner: {
@@ -53,7 +53,7 @@ var houseSchema = new Schema({
 });
 
 // Create the House model using the houseSchema
-var House = mongoose.model("House", houseSchema);
+var Homes = mongoose.model("Homes", HomesSchema);
 
 // Export the House model
-module.exports = House;
+module.exports = Homes;
