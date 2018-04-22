@@ -2,18 +2,18 @@ import express from "express";
 //import controller file
 import * as sdhController from "../controllers/sdh.server.controller";
 import bodyParser from 'body-parser';
-import Houses from './model/Houses';
+import Homes from '../models/Homes';
 // get an instance of express router
 const router = express.Router();
-router
-  .route("/")
-  .get(sdhController.getHouses)
-  .post(sdhController.addHouse)
-  .put(sdhController.updateHouse);
-router
-  .route("/:id")
-  .get(sdhController.getHouse)
-  .delete(sdhController.deleteHouse);
+// router
+//   .route("/")
+//   .get(sdhController.getHouses)
+//   .post(sdhController.addHouse)
+//   .put(sdhController.updateHouse);
+// router
+//   .route("/:id")
+//   .get(sdhController.getHouse)
+//   .delete(sdhController.deleteHouse);
 
   router.route('/homes/:home_id')
   //The put method gives us the chance to update our home based on 
