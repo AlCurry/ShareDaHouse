@@ -1,1 +1,1 @@
-export { default } from './Homes';
+export { default } from './HomeList';

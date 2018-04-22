@@ -1,11 +1,10 @@
-import Path from 'path';
+import path from 'path';
 import bodyParser from "body-parser";
 import logger from "morgan";
 import express from "express";
 import mongoose from "mongoose";
 import bb from "express-busboy";
 import SourceMapSupport from "source-map-support";
-
 import routes from "./routes/sdh-server-routes.js";
 
 const app = express();

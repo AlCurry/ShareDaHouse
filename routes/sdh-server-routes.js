@@ -16,14 +16,11 @@ const router = express.Router();
 //   .delete(sdhController.deleteHouse);
 
   router.route('/homes/:home_id')
-  //The put method gives us the chance to update our home based on 
-  //the ID passed to the route
+  //the ID passed to the route / update house
    .put(function(req, res) {
    Home.findById(req.params.home_id, function(err, home) {
    if (err)
    res.send(err);
-   //setting the new house attriutes to whatever was changed. If 
-  //nothing was changed we will not alter the field.
    (req.body.name) ? home.author = req.body.name : null;
    (req.body.address) ? home.text = req.body.address : null;
    (req.body.start) ? home.author = req.body.start : null;
@@ -39,7 +36,6 @@ const router = express.Router();
    });
    });
    })
-   //delete method for removing a home from our database
    .delete(function(req, res) {
    //selects the home by its ID, then removes it.
    Home.remove({ _id: req.params.home_id }, function(err, home) {
@@ -54,20 +50,16 @@ router('/', function (req, res) {
 });
 //adding the /homes route to our router
 router.route('./models/Homes')
-  //retrieve homes from db
   .get(function (req, res) {
     //Homes Schema
     Home.find(function (err, houses) {
       if (err)
         res.send(err);
-      //responds with a json object of our db homes.
       res.json(homes)
     });
   })
-  //post new home to the db
   .post(function (req, res) {
     var home = new Home();
-    //body parser for req.body
     home.name = req.body.name;
     home.address = req.body.address;
     home.region = req.body.region;
